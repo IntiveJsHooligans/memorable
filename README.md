@@ -3,6 +3,7 @@
 ## Install application
 
 Run `npm instal` to install all libraries. Angular version 5.2.2
+[Angular Style Guide](https://angular.io/guide/styleguide) -- must read
 
 ## Development server / start
 
@@ -27,3 +28,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Storybooks
 
 Run `npm run storybook` for a Storybook's components. Navigate to `http://localhost:6006/`.
+
+[StoryBook - https://github.com/storybooks/storybook](https://github.com/storybooks/storybook)
+
+## Links
+
+[7 Angular Tools That You Should Consider](http://blog.mgechev.com/2017/04/23/angular-tooling-codelyzer-angular-cli-ngrev/)
+[Angular Style Guide](https://angular.io/guide/styleguide)
