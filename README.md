@@ -2,7 +2,8 @@
 
 ## Install application
 
-Run `npm instal` to install all libraries. Angular version 5.2.2
+Run `$ npm install` to install all libraries. Angular version 5.2.2
+
 [Angular Style Guide](https://angular.io/guide/styleguide) -- must read
 
 ## Development server / start
@@ -33,5 +34,5 @@ Run `npm run storybook` for a Storybook's components. Navigate to `http://localh
 
 ## Links
 
-[7 Angular Tools That You Should Consider](http://blog.mgechev.com/2017/04/23/angular-tooling-codelyzer-angular-cli-ngrev/)
-[Angular Style Guide](https://angular.io/guide/styleguide)
+* [7 Angular Tools That You Should Consider](http://blog.mgechev.com/2017/04/23/angular-tooling-codelyzer-angular-cli-ngrev/)
+* [Angular Style Guide](https://angular.io/guide/styleguide)
