@@ -6,8 +6,11 @@ import { ButtonComponent } from './form/button/button.component';
   imports: [
     CommonModule
   ],
+  exports: [
+    ButtonComponent
+  ],
   declarations: [
-
-  ButtonComponent],
+    ButtonComponent
+  ],
 })
 export class SharedModule { }

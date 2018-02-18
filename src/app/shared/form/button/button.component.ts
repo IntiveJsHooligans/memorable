@@ -12,15 +12,13 @@ export class ButtonComponent implements OnInit {
   @Input() border: boolean;
   @Input() borderColor: string;
   @Input() backgroundColor: string;
-  @ViewChild('button', { read: ElementRef }) button: ElementRef;
+  @ViewChild('button') button: ElementRef;
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2, ) { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
-    this.size = this.size || 'middle';
-    this.content = this.content || 'button';
+    this.size = this.size || 'middle';    
     this.border = this.border || true;
-    this.backgroundColor = this.backgroundColor || 'white';
     this.borderColor = this.borderColor || 'blue';
     this.contentColor = this.contentColor || 'blue';
 
@@ -28,7 +26,7 @@ export class ButtonComponent implements OnInit {
   }
 
   private applyStyles(): void {
-    this.renderer.setStyle(this.elementRef, "color", this.backgroundColor);
+    this.renderer.setStyle(this.button.nativeElement, "background-color", this.backgroundColor);    
   }
 
 }
