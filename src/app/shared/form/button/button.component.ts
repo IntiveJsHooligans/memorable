@@ -6,27 +6,42 @@ import { NgModule, Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } 
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-  @Input() size: string;
+  @Input() fontSize: string;
   @Input() content: string;
-  @Input() contentColor: string;
-  @Input() border: boolean;
+  @Input() fontColor: string;
+  @Input() border: string;
+  @Input() borderRadius: string;
   @Input() borderColor: string;
   @Input() backgroundColor: string;
+  @Input() width: number;
+  @Input() height: number;
+  @Input() textAlign: string;
   @ViewChild('button') button: ElementRef;
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
-    this.size = this.size || 'middle';    
-    this.border = this.border || true;
-    this.borderColor = this.borderColor || 'blue';
-    this.contentColor = this.contentColor || 'blue';
+    this.border = this.border ? this.border : 'none';
+    this.borderRadius = this.borderRadius ? this.borderRadius : 'none';
+    this.borderColor = this.borderColor ? this.borderColor : 'CornflowerBlue';
+    this.fontSize = this.fontSize ? this.fontSize : '14px';
+    this.fontColor = this.fontColor ? this.fontColor : 'white';
+    this.backgroundColor = this.backgroundColor ? this.backgroundColor : '#0f71e2';
+    this.content = this.content ? this.content : 'button';
+    this.textAlign = this.textAlign ? this.textAlign : 'center';
 
     this.applyStyles();
   }
 
   private applyStyles(): void {
-    this.renderer.setStyle(this.button.nativeElement, "background-color", this.backgroundColor);    
+    this.renderer.setStyle(this.button.nativeElement, "background-color", this.backgroundColor);
+    this.renderer.setStyle(this.button.nativeElement, "border", `${this.border} solid ${this.borderColor}`);
+    this.renderer.setStyle(this.button.nativeElement, "font-size", this.fontSize);
+    this.renderer.setStyle(this.button.nativeElement, "color", this.fontColor);
+    this.renderer.setStyle(this.button.nativeElement, "border-radius", this.borderRadius);
+    this.renderer.setStyle(this.button.nativeElement, "width", this.width);
+    this.renderer.setStyle(this.button.nativeElement, "height", this.height);
+    this.renderer.setStyle(this.button.nativeElement, "text-align", this.textAlign);
   }
 
 }
