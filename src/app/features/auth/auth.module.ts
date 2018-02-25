@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+
+// routing
+import { AuthRoutingModule } from './auth-routing.module';
 
 // components
 import * as fromComponents from './components';
@@ -8,25 +12,18 @@ import * as fromComponents from './components';
 // containers
 import * as fromContainers from './containers';
 
-const routes: Routes = [
-  {
-    path: 'sign-in',
-    component: fromContainers.SignInComponent,
-    children: []
-  }
-];
+
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
-  ],
-  exports: [
-    RouterModule,
-  ],
-  providers: [
+    ReactiveFormsModule,
 
+    // routing
+    AuthRoutingModule,
   ],
+  exports: [],
+  providers: [],
   declarations: [
     // containers
     ...fromContainers.containers,
