@@ -16,6 +16,7 @@ export class ButtonComponent implements OnInit {
   @Input() width: number;
   @Input() height: number;
   @Input() textAlign: string;
+  @Input() loading: boolean;
   @ViewChild('button') button: ElementRef;
 
   constructor(private renderer: Renderer2) { }
@@ -29,6 +30,7 @@ export class ButtonComponent implements OnInit {
     this.backgroundColor = this.backgroundColor ? this.backgroundColor : '#0f71e2';
     this.content = this.content ? this.content : 'button';
     this.textAlign = this.textAlign ? this.textAlign : 'center';
+    this.loading = this.loading ? this.loading : true;
 
     this.applyStyles();
   }
