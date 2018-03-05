@@ -1,4 +1,16 @@
-<h1>Sign IN</h1>
-<p>
-  sign-in works!
-</p>
+<in-auth-root>
+
+  <form [formGroup]="form" novalidate (submit)="onSubmit()">
+    <h1>Login</h1>
+    <div>
+      <input type="text" class="form-control" formControlName="username" placeholder="E-mail">
+    </div>
+    <div>
+      <input type="password" class="form-control" formControlName="password" placeholder="Password">
+    </div>
+    <button type="submit" [disabled]="!form.valid">Login</button>
+  </form>
+
+  <a [routerLink]="['/reset-password']" class="link">Forgot your password?</a>
+
+</in-auth-root>

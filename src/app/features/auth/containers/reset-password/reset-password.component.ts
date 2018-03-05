@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'in-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+  selector: 'in-reset-password',
+  templateUrl: './reset-password.component.html',
+  styleUrls: ['./reset-password.component.scss']
 })
-export class SignInComponent implements OnInit {
+export class ResetPasswordComponent implements OnInit {
 
   form: FormGroup;
 
@@ -21,11 +21,11 @@ export class SignInComponent implements OnInit {
   createForm() {
     this.form = this.fb.group({
       username: ['', Validators.required],
-      password: ['', Validators.required],
     });
   }
 
   onSubmit() {
     alert('submit');
   }
+
 }
