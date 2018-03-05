@@ -1,0 +1,7 @@
+<h3>CREATE TASK:</h3>
+<form [formGroup]="form" novalidate (submit)="onSubmit()">
+  <div>
+    <input type="text" class="form-control" formControlName="title" placeholder="Title">
+  </div>
+  <button type="submit" [disabled]="!form.valid">Add</button>
+</form>

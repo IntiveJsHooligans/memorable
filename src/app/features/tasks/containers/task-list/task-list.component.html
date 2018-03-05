@@ -1,0 +1,12 @@
+<h1>Tasks</h1>
+
+<h4 *ngIf="loading">Loading...</h4>
+
+<div *ngFor="let task of tasks" [@flyInOut] class="task">
+  <p>TITLE: {{ task.title }}</p>
+  <small>CREATED AT: {{ task.createdAt|date:'short' }}</small>
+  <button (click)="onDelete(task.id)">DELETE</button>
+</div>
+
+
+<in-task-create></in-task-create>
