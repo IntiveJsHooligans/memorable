@@ -8,19 +8,16 @@ const routes: Routes = [
   {
     path: 'sign-in',
     component: fromContainers.SignInComponent,
-    children: []
   },
   {
     path: 'sign-up',
     component: fromContainers.SignUpComponent,
-    children: []
   },
   {
     path: 'reset-password',
     component: fromContainers.ResetPasswordComponent,
-    children: []
   },
-]
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
