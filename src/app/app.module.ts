@@ -1,13 +1,19 @@
+
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+// graphQL
+import { GraphQLModule } from './apollo.config';
+
 // modules
 import { AuthModule } from './features/auth/auth.module';
-import { TodosModule } from './features/todos/todos.module';
+import { TasksModule } from './features/tasks/tasks.module';
 
 @NgModule({
   declarations: [
@@ -15,10 +21,15 @@ import { TodosModule } from './features/todos/todos.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    // graphQL
+    GraphQLModule,
+
     AppRoutingModule,
 
-    TodosModule,
+    // custom
     AuthModule,
+    TasksModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

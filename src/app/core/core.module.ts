@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -6,7 +6,15 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ],
   declarations: [
-
+  ],
+  providers: [
+    // services
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+  constructor( @Optional() @SkipSelf() core: CoreModule) {
+    if (core) {
+      throw new Error('You shall not run!');
+    }
+  }
+}
