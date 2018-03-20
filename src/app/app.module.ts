@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 // modules
 import { AuthModule } from './features/auth/auth.module';
 import { TodosModule } from './features/todos/todos.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { TodosModule } from './features/todos/todos.module';
 
     TodosModule,
     AuthModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
