@@ -1,0 +1,15 @@
+<in-auth-root>
+  <h1>Sign Up</h1>
+  <form [formGroup]="form" novalidate (submit)="onSubmit()">
+    <div>
+      <input type="text" formControlName="username" placeholder="E-mail">
+    </div>
+    <div>
+      <input type="password" formControlName="password" placeholder="Password">
+    </div>
+    <div>
+      <input type="password" formControlName="passwordRepeat" placeholder="Repeat Password">
+    </div>
+    <button type="submit" [disabled]="!form.valid">Create Account</button>
+  </form>
+</in-auth-root>
