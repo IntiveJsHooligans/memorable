@@ -1,11 +1,15 @@
+@import "colors";
 button {
     border: none;    
     padding: 15px 32px;
+    background-color: $color-primary;
+    color: $color-white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     margin: 4px 2px;
+    font-family: Lato;
     cursor: pointer;
 }
 i {
